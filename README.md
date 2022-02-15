@@ -45,7 +45,9 @@ beget-api-cli -m [command] [options]
 ```
 ### Examples
 ```shell
-beget-api-cli -h -m account/info
+beget-api-cli -h -m mysql/addDb
+
+beget-api-cli -m mysql/addDb -l login -p 'password' --ending test --mysql_password 'dbpassword'
 ```
 ### List of available commands
 ```plaintext
