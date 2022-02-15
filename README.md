@@ -48,7 +48,7 @@ beget-api-cli -m [command] [options]
 beget-api-cli -h -m account/info
 ```
 ### List of available commands
-```shell
+```plaintext
   account/info [options]                Print customer account info
   account/ssh [options]                 Toggle ssh on/off for the main account
   account/sshFtpUser [options]          Toggle ssh on/off for an additional ftp user
