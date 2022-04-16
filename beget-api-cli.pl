@@ -1680,7 +1680,7 @@ sub dnsSaveRecordsToFile {
           'Accept'         => '*/*',
           'Content-Type'   => 'application/x-www-form-urlencoded',
           'Content-Length' => "$length",
-          'User-Agent'     => 'curl/7.55.1'
+          'User-Agent'     => 'beget-api-cli/0.0.2'
       },
       content => "$content"
     },
@@ -2002,7 +2002,7 @@ sub domainGetId {
           'Accept'         => '*/*',
           'Content-Type'   => 'application/x-www-form-urlencoded',
           'Content-Length' => "$length",
-          'User-Agent'     => 'curl/7.55.1'
+          'User-Agent'     => 'beget-api-cli/0.0.2'
       },
       content => "$content"
     },
@@ -2040,7 +2040,7 @@ sub domainGetZoneId {
           'Accept'         => '*/*',
           'Content-Type'   => 'application/x-www-form-urlencoded',
           'Content-Length' => "$length",
-          'User-Agent'     => 'curl/7.55.1'
+          'User-Agent'     => 'beget-api-cli/0.0.2'
       },
       content => "$content"
     },
@@ -2108,7 +2108,7 @@ sub domainGetSubdomainId {
           'Accept'         => '*/*',
           'Content-Type'   => 'application/x-www-form-urlencoded',
           'Content-Length' => "$length",
-          'User-Agent'     => 'curl/7.55.1'
+          'User-Agent'     => 'beget-api-cli/0.0.2'
       },
       content => "$content"
     },
@@ -2455,7 +2455,7 @@ sub sendRequest {
           'Accept'         => '*/*',
           'Content-Type'   => 'application/x-www-form-urlencoded',
           'Content-Length' => "$length",
-          'User-Agent'     => 'curl/7.55.1'
+          'User-Agent'     => 'beget-api-cli/0.0.2'
       },
       content => "$content"
     },
@@ -2464,6 +2464,7 @@ sub sendRequest {
 
   $json_string = $response->{content};
   $json = 'JSON::PP'->new->pretty;
+  $json->canonical(1);
   print $json->encode($json->decode($json_string));
 }
 
